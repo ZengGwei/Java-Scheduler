@@ -8,7 +8,7 @@ quartz 集成 springboot 集成定时任务
 scheduler实例化后，可以启动(start)、暂停(stand-by)、停止(shutdown)。注意：scheduler被停止后，除非重新实例化，否则不能重新启动；只有当scheduler启动后，即使处于暂停状态也不行，trigger才会被触发（job才会被执行）。
 
 下面的代码片段，实例化并启动一个scheduler，调度执行一个job：
- `SchedulerFactory schedFact = new org.quartz.impl.StdSchedulerFactory();
+ ``SchedulerFactory schedFact = new org.quartz.impl.StdSchedulerFactory();
 
   Scheduler sched = schedFact.getScheduler();
 
@@ -29,4 +29,4 @@ scheduler实例化后，可以启动(start)、暂停(stand-by)、停止(shutdown
       .build();
 
   // Tell quartz to schedule the job using our trigger
-  sched.scheduleJob(job, trigger);`
+  sched.scheduleJob(job, trigger);``
